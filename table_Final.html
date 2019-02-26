@@ -1,0 +1,57 @@
+<html>
+<body>
+
+<button type="button" onclick="tab()">Generate a table
+</button>
+<script>
+    function tab()
+     {
+      var v=[['Srishti','Kapoor', 'hbsffnf@gmail.com','2225147','B-4785','Trainee', '06-01-97'],
+            ['Charu', 'Chaudhary', 'hdkfkf@gmail.com','2227457','B-4688','Trainee', '30-11-97'],
+            ['Himanshu', 'chaudhary','hdkfkf@gmail.com','2227457','B-4785','Trainee', '30-11-97'],
+            ['Akshay', 'chaudhary','hdkfkf@gmail.com','2227457','B-4697','Trainee', '30-11-97'],
+            ['Shruti', 'Singh','hdkfkf@gmail.com','2221111','B-4600','Trainee', '30-11-97'],
+            ['Himanshu', 'chuaudhary','hdkfkf@gmail.com','2227457','B-4669','Trainee', '30-11-97'],
+            ['Himanshu', 'chuaudhary','hdkfkf@gmail.com','2227457','B-4635','Trainee', '30-11-97']
+            ];
+
+    var header=["First","last","email","Phone","ID","Designation","DOB"];
+
+    var tbl=document.createElement("table");
+     tbl.border=1;
+     var row=document.createElement("tr")
+     for(let i=0;i<header.length;i++)
+     {
+      var head1=document.createElement("th");
+      head1.innerHTML=header[i];
+      row.appendChild(head1);
+     }
+    tbl.appendChild(row);
+    document.body.appendChild(tbl);
+
+     
+          for (var i = 0; i < 7; i++) {
+        
+          var row1 = document.createElement("tr");
+    
+          for (var j = 0; j < 7; j++) {
+          
+          var cell = document.createElement("td");
+          var cellText = document.createTextNode(v[i][j]);
+
+          cell.appendChild(cellText);
+          row1.appendChild(cell);
+        }
+    
+        // add the row to the end of the table body
+        tbl.appendChild(row1);
+      }
+
+
+
+    
+}   
+</script>
+
+</body>
+</html>
